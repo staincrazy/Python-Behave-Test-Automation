@@ -1,0 +1,47 @@
+<testsuite name="login.User is able to login to OrangeHRM application using correct credentials" tests="2" errors="0" failures="1" skipped="0" time="6.50978" timestamp="2022-03-15T22:04:17.864853" hostname="Reanolds-MacBook-Air.local"><testcase classname="login.User is able to login to OrangeHRM application using correct credentials" name="Navigate to the application -- @1.1 " status="passed" time="3.252571"><system-out>
+<![CDATA[
+@scenario.begin
+  Scenario Outline: Navigate to the application -- @1.1 
+    Given I navigate to "https://opensource-demo.orangehrmlive.com/index.php" ... passed in 3.253s
+    Then I see proper "OrangeHRM" ... passed in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+
+Captured stdout:
+Either redirection was performed, or condition is not correct
+https://opensource-demo.orangehrmlive.com/index.php
+
+]]>
+</system-out></testcase><testcase classname="login.User is able to login to OrangeHRM application using correct credentials" name="Navigate to the application -- @1.2 " status="failed" time="3.257209"><failure type="AssertionError" message="">
+<![CDATA[
+Failing step: Then I see proper "Hello, World" ... failed in 0.000s
+Location: features/test_scenarios/login.feature:7
+Traceback (most recent call last):
+  File "/Users/reanoldpiatrenka/PycharmProjects/OpenHRM/venv/lib/python3.9/site-packages/behave/model.py", line 1329, in run
+    match.run(runner.context)
+  File "/Users/reanoldpiatrenka/PycharmProjects/OpenHRM/venv/lib/python3.9/site-packages/behave/matchers.py", line 98, in run
+    self.func(context, *args, **kwargs)
+  File "features/steps/login_steps.py", line 21, in step_impl
+    assert page_title == LoginPageLocators.login_page_title
+AssertionError
+
+Captured stdout:
+Either redirection was performed, or condition is not correct
+https://opensource-demo.orangehrmlive.com/index.php]]>
+</failure><system-out>
+<![CDATA[
+@scenario.begin
+  Scenario Outline: Navigate to the application -- @1.2 
+    Given I navigate to "https://opensource-demo.orangehrmlive.com/index.php" ... passed in 3.257s
+    Then I see proper "Hello, World" ... failed in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+
+Captured stdout:
+Either redirection was performed, or condition is not correct
+https://opensource-demo.orangehrmlive.com/index.php
+
+]]>
+</system-out></testcase></testsuite>
