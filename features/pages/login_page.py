@@ -6,9 +6,9 @@ from features.pages.base_page import BasePage
 class LoginPageLocators:
     application_url = "https://opensource-demo.orangehrmlive.com/index.php"
     login_page_title = "OrangeHRM"
-    login_field = (By.XPATH, "")
-    password_field = (By.XPATH, "")
-    login_button = (By.XPATH, "")
+    login_field = (By.XPATH, ".//input[@id='txtUsername']")
+    password_field = (By.XPATH, ".//input[@id='txtPassword']")
+    login_button = (By.XPATH, ".//input[@id='btnLogin']")
 
 
 class LoginPage(BasePage):
