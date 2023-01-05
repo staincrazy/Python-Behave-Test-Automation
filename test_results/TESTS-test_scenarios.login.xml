@@ -1,0 +1,107 @@
+<testsuite name="test_scenarios.login.User is able to login to OrangeHRM application using correct credentials" tests="3" errors="1" failures="1" skipped="0" time="14.993736" timestamp="2023-01-05T23:23:41.006333" hostname="Reanolds-MacBook-Air.local"><testcase classname="test_scenarios.login.User is able to login to OrangeHRM application using correct credentials" name="Navigate to the application -- @1.1 " status="passed" time="1.753991"><system-out>
+<![CDATA[
+@scenario.begin
+  Scenario Outline: Navigate to the application -- @1.1 
+    Given I navigate to "https://opensource-demo.orangehrmlive.com/index.php" ... passed in 1.754s
+    Then I see proper "OrangeHRM" ... passed in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+
+Captured stdout:
+Either redirection was performed, or condition is not correct
+https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+
+]]>
+</system-out></testcase><testcase classname="test_scenarios.login.User is able to login to OrangeHRM application using correct credentials" name="Navigate to the application -- @1.2 " status="failed" time="1.428011"><failure type="AssertionError" message="">
+<![CDATA[
+Failing step: Then I see proper "Hello, World" ... failed in 0.001s
+Location: features/test_scenarios/login.feature:7
+Traceback (most recent call last):
+  File "/Users/reanoldpiatrenka/SoftwareDevelopment/PycharmProjects/openHRMautomationProject/venv/lib/python3.11/site-packages/behave/model.py", line 1329, in run
+    match.run(runner.context)
+  File "/Users/reanoldpiatrenka/SoftwareDevelopment/PycharmProjects/openHRMautomationProject/venv/lib/python3.11/site-packages/behave/matchers.py", line 98, in run
+    self.func(context, *args, **kwargs)
+  File "features/steps/login_steps.py", line 22, in verify_page_title
+    assert page_title == LoginPageLocators.login_page_title
+AssertionError
+
+Captured stdout:
+Either redirection was performed, or condition is not correct
+https://opensource-demo.orangehrmlive.com/web/index.php/auth/login]]>
+</failure><system-out>
+<![CDATA[
+@scenario.begin
+  Scenario Outline: Navigate to the application -- @1.2 
+    Given I navigate to "https://opensource-demo.orangehrmlive.com/index.php" ... passed in 1.427s
+    Then I see proper "Hello, World" ... failed in 0.001s
+
+@scenario.end
+--------------------------------------------------------------------------------
+
+Captured stdout:
+Either redirection was performed, or condition is not correct
+https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+
+]]>
+</system-out></testcase><testcase classname="test_scenarios.login.User is able to login to OrangeHRM application using correct credentials" name="Login to application -- @1.1 " status="failed" time="11.811734"><error type="TimeoutException" message="Message: &#10;Stacktrace:&#10;0   chromedriver                        0x000000010468bb7c chromedriver + 4209532&#10;1   chromedriver                        0x0000000104617418 chromedriver + 3732504&#10;2   chromedriver                        0x00000001042ca368 chromedriver + 271208&#10;3   chromedriver                        0x0000000104305fc8 chromedriver + 516040&#10;4   chromedriver                        0x000000010433d804 chromedriver + 743428&#10;5   chromedriver                        0x00000001042f859c chromedriver + 460188&#10;6   chromedriver                        0x00000001042f9644 chromedriver + 464452&#10;7   chromedriver                        0x000000010465d30c chromedriver + 4018956&#10;8   chromedriver                        0x0000000104660fd8 chromedriver + 4034520&#10;9   chromedriver                        0x000000010466711c chromedriver + 4059420&#10;10  chromedriver                        0x0000000104661bac chromedriver + 4037548&#10;11  chromedriver                        0x000000010463bbb0 chromedriver + 3881904&#10;12  chromedriver                        0x000000010467e120 chromedriver + 4153632&#10;13  chromedriver                        0x000000010467e274 chromedriver + 4153972&#10;14  chromedriver                        0x000000010469282c chromedriver + 4237356&#10;15  libsystem_pthread.dylib             0x000000019c9d906c _pthread_start + 148&#10;16  libsystem_pthread.dylib             0x000000019c9d3e2c thread_start + 8&#10;">
+<![CDATA[
+Failing step: When I enter login "Admin" ... failed in 10.284s
+Location: features/test_scenarios/login.feature:15
+Traceback (most recent call last):
+  File "/Users/reanoldpiatrenka/SoftwareDevelopment/PycharmProjects/openHRMautomationProject/venv/lib/python3.11/site-packages/behave/model.py", line 1329, in run
+    match.run(runner.context)
+  File "/Users/reanoldpiatrenka/SoftwareDevelopment/PycharmProjects/openHRMautomationProject/venv/lib/python3.11/site-packages/behave/matchers.py", line 98, in run
+    self.func(context, *args, **kwargs)
+  File "features/steps/login_steps.py", line 28, in enter_login
+    login_page.enter_login(login)
+  File "/Users/reanoldpiatrenka/SoftwareDevelopment/PycharmProjects/openHRMautomationProject/features/pages/login_page.py", line 22, in enter_login
+    self.clear(LoginPageLocators.login_field)
+  File "/Users/reanoldpiatrenka/SoftwareDevelopment/PycharmProjects/openHRMautomationProject/features/pages/base_page.py", line 17, in clear
+    WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located(by_locator)).clear()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/reanoldpiatrenka/SoftwareDevelopment/PycharmProjects/openHRMautomationProject/venv/lib/python3.11/site-packages/selenium/webdriver/support/wait.py", line 89, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+0   chromedriver                        0x000000010468bb7c chromedriver + 4209532
+1   chromedriver                        0x0000000104617418 chromedriver + 3732504
+2   chromedriver                        0x00000001042ca368 chromedriver + 271208
+3   chromedriver                        0x0000000104305fc8 chromedriver + 516040
+4   chromedriver                        0x000000010433d804 chromedriver + 743428
+5   chromedriver                        0x00000001042f859c chromedriver + 460188
+6   chromedriver                        0x00000001042f9644 chromedriver + 464452
+7   chromedriver                        0x000000010465d30c chromedriver + 4018956
+8   chromedriver                        0x0000000104660fd8 chromedriver + 4034520
+9   chromedriver                        0x000000010466711c chromedriver + 4059420
+10  chromedriver                        0x0000000104661bac chromedriver + 4037548
+11  chromedriver                        0x000000010463bbb0 chromedriver + 3881904
+12  chromedriver                        0x000000010467e120 chromedriver + 4153632
+13  chromedriver                        0x000000010467e274 chromedriver + 4153972
+14  chromedriver                        0x000000010469282c chromedriver + 4237356
+15  libsystem_pthread.dylib             0x000000019c9d906c _pthread_start + 148
+16  libsystem_pthread.dylib             0x000000019c9d3e2c thread_start + 8
+
+
+Captured stdout:
+Either redirection was performed, or condition is not correct
+https://opensource-demo.orangehrmlive.com/web/index.php/auth/login]]>
+</error><system-out>
+<![CDATA[
+@scenario.begin
+  Scenario Outline: Login to application -- @1.1 
+    Given I navigate to "https://opensource-demo.orangehrmlive.com/index.php" ... passed in 1.528s
+    When I enter login "Admin" ... failed in 10.284s
+    And I enter password "admin123" ... skipped in 0.000s
+    And I click on login button ... skipped in 0.000s
+    Then I see dashboard ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+
+Captured stdout:
+Either redirection was performed, or condition is not correct
+https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+
+]]>
+</system-out></testcase></testsuite>

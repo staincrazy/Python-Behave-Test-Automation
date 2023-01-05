@@ -1,7 +1,7 @@
 from behave import *
 
 from features.pages.dashboard_page import DashboardPage, DashboardPageLocators
-from features.pages.login_page import LoginPageLocators, LoginPage
+from features.pages.login_page import LoginPageSelectors, LoginPage
 
 use_step_matcher("re")
 
@@ -11,7 +11,7 @@ def navigate_to_application(context, application_url):
     context.driver.get(application_url)
     # verifying that no redirection was performed
     try:
-        assert context.driver.current_url == "".format(LoginPageLocators.application_url)
+        assert context.driver.current_url == "".format(LoginPageSelectors.APPLICATION_URL)
     except AssertionError:
         print("Either redirection was performed, or condition is not correct")
         print(context.driver.current_url)
@@ -19,7 +19,7 @@ def navigate_to_application(context, application_url):
 
 @then('I see proper "(?P<page_title>.+)"')
 def verify_page_title(context, page_title):
-    assert page_title == LoginPageLocators.login_page_title
+    assert page_title == LoginPageSelectors.LOGIN_PAGE_TITLE
 
 
 @when('I enter login "(?P<login>.+)"')

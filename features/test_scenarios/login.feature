@@ -1,4 +1,6 @@
-# Created by reanoldpiatrenka at 15/03/2022
+# Created on 15/03/2022
+  # Updated on 5/01/2023
+
 Feature: User is able to login to OrangeHRM application using correct credentials
 
   Scenario Outline: Navigate to the application

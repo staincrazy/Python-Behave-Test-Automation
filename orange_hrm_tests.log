@@ -72,3 +72,28 @@ Login to application -- @1.1  is executed with the following result Status.faile
 Navigate to the application -- @1.1  is executed with the following result Status.passed
 Navigate to the application -- @1.2  is executed with the following result Status.failed
 Login to application -- @1.1  is executed with the following result Status.failed
+Navigate to the application -- @1.1  is executed with the following result Status.failed
+Navigate to the application -- @1.2  is executed with the following result Status.failed
+Login to application -- @1.1  is executed with the following result Status.failed
+Navigate to the application -- @1.1  is executed with the following result Status.failed
+Navigate to the application -- @1.2  is executed with the following result Status.failed
+Navigate to the application -- @1.1  is executed with the following result Status.failed
+Navigate to the application -- @1.2  is executed with the following result Status.failed
+Login to application -- @1.1  is executed with the following result Status.failed
+Navigate to the application -- @1.1  is executed with the following result Status.failed at 2023-01-05 23:19:27.756920
+Navigate to the application -- @1.2  is executed with the following result Status.failed at 2023-01-05 23:19:28.118045
+Login to application -- @1.1  is executed with the following result Status.failed at 2023-01-05 23:19:40.464954
+Navigate to the application -- @1.1  is executed with the following result Status.failed at 2023-01-05 23:20:43.033319
+Navigate to the application -- @1.2  is executed with the following result Status.failed at 2023-01-05 23:20:43.434203
+Login to application -- @1.1  is executed with the following result Status.failed at 2023-01-05 23:20:43.819401
+Navigate to the application -- @1.1  is executed with the following result Status.failed at 2023-01-05 23:21:52.567448
+Navigate to the application -- @1.2  is executed with the following result Status.failed at 2023-01-05 23:21:52.969445
+Login to application -- @1.1  is executed with the following result Status.failed at 2023-01-05 23:21:53.365584
+Navigate to the application -- @1.1  is executed with the following result Status.passed at 2023-01-05 23:23:23.493159
+Navigate to the application -- @1.2  is executed with the following result Status.failed at 2023-01-05 23:23:26.932607
+Login to application -- @1.1  is executed with the following result Status.failed at 2023-01-05 23:23:40.744776
+Navigate to the application -- @1.1  is executed with the following result Status.passed at 2023-01-05 23:32:42.867894
+Navigate to the application -- @1.2  is executed with the following result Status.failed at 2023-01-05 23:32:47.300997
+Navigate to the application -- @1.1  is executed with the following result Status.passed at 2023-01-05 23:36:21.731263
+Navigate to the application -- @1.2  is executed with the following result Status.failed at 2023-01-05 23:36:25.416213
+Login to application -- @1.1  is executed with the following result Status.failed at 2023-01-05 23:36:28.930442
