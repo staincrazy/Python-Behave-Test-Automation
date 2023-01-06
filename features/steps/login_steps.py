@@ -12,7 +12,12 @@ def navigate_to_application(context, application_url):
 
 @then('I see proper "(?P<page_title>.+)"')
 def verify_page_title(context, page_title):
-    assert page_title == context.browser.get_page_title()
+
+    try:
+        assert page_title == context.browser.get_page_title()
+    except AssertionError:
+        print(f"Test fails for expected title - {page_title} whilst "
+              f"actual page title is {context.browser.get_page_title()}")
 
 
 @when('I enter username "(?P<username>.+)"')

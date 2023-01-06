@@ -8,6 +8,3 @@ class LoginPageSelectors:
     LOGIN_FIELD = (By.XPATH, ".//input[@id='txtUsername']")
     PASSWORD_FIELD = (By.XPATH, ".//input[@id='txtPassword']")
     LOGIN_BUTTON = (By.XPATH, ".//input[@id='btnLogin']")
-
-
-

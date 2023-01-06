@@ -56,3 +56,12 @@ class Browser:
 
         element = WebDriverWait(self.driver, self.timeout).until(EC.visibility_of_element_located(by_locator))
         ActionChains(self.driver).move_to_element(element).perform()
+
+    def quit(self):
+
+        self.driver.quit()
+
+    def save_screenshot(self, screenshot_name):
+
+        self.driver.save_screenshot('./screenshots/' + screenshot_name)
+
