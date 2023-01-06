@@ -13,10 +13,10 @@ Feature: User is able to login to OrangeHRM application using correct credential
 
   Scenario Outline: Login to application
     Given I navigate to "<application_url>"
-    When I enter login "<login>"
+    When I enter username "<username>"
     And I enter password "<password>"
     And I click on login button
     Then I see dashboard
     Examples:
-    |application_url|login|password|
+    |application_url|username|password|
     |https://opensource-demo.orangehrmlive.com/index.php|Admin|admin123|

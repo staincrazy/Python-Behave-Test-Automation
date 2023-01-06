@@ -1,6 +1,5 @@
 from selenium.webdriver.common.by import By
-
-from features.pages.base_page import BasePage
+from engine.actions import *
 
 
 class LoginPageSelectors:
@@ -12,23 +11,15 @@ class LoginPageSelectors:
     LOGIN_BUTTON = (By.XPATH, ".//input[@id='btnLogin']")
 
 
-class LoginPage(BasePage):
-    def __init__(self, context):
-        BasePage.__init__(
-            self,
-            context.driver
-        )
+class LoginPage:
 
-    def enter_login(self, login):
+    __default_username = ""
+    __default_password = ""
 
-        self.clear(LoginPageSelectors.LOGIN_FIELD)
-        self.input_text(LoginPageSelectors.LOGIN_FIELD, login)
+    @staticmethod
+    def login(username=None, password=None):
 
-    def enter_password(self, password):
+        input_text(LoginPageSelectors.LOGIN_FIELD, username)
+        input_text(LoginPageSelectors.PASSWORD_FIELD, password)
+        click(LoginPageSelectors.LOGIN_BUTTON)
 
-        self.clear(LoginPageSelectors.PASSWORD_FIELD)
-        self.input_text(LoginPageSelectors.PASSWORD_FIELD, password)
-
-    def click_on_login_button(self):
-
-        self.click(LoginPageSelectors.LOGIN_BUTTON)

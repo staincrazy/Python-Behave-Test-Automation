@@ -15,4 +15,5 @@ class TestWebDriver:
 
         driver = webdriver.Chrome(service=service, options=options)
         driver.maximize_window()
+
         return driver

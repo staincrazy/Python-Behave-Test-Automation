@@ -1,46 +1,36 @@
 from behave import *
-
-from features.pages.dashboard_page import DashboardPage, DashboardPageLocators
-from features.pages.login_page import LoginPageSelectors, LoginPage
+from engine.actions import *
+from features.pages.dashboard_page import DashboardPageSelectors
+from features.pages.login_page import LoginPageSelectors
 
 use_step_matcher("re")
 
 
 @given('I navigate to "(?P<application_url>.+)"')
 def navigate_to_application(context, application_url):
-    context.driver.get(application_url)
-    # verifying that no redirection was performed
-    try:
-        assert context.driver.current_url == "".format(LoginPageSelectors.APPLICATION_URL)
-    except AssertionError:
-        print("Either redirection was performed, or condition is not correct")
-        print(context.driver.current_url)
+    navigate(application_url)
 
 
 @then('I see proper "(?P<page_title>.+)"')
 def verify_page_title(context, page_title):
-    assert page_title == LoginPageSelectors.LOGIN_PAGE_TITLE
+    assert page_title == get_title()
 
 
-@when('I enter login "(?P<login>.+)"')
-def enter_login(context, login):
-    login_page = LoginPage(context)
-    login_page.enter_login(login)
-
-
-@step("I click on login button")
-def click_on_login_button(context):
-    login_page = LoginPage(context)
-    login_page.click_on_login_button()
-
-
-@then("I see dashboard")
-def verify_dashboard_visible(context):
-    dashboard_page = DashboardPage(context)
-    dashboard_page.is_visible(DashboardPageLocators.dashboard_page_tab)
+@when('I enter username "(?P<username>.+)"')
+def enter_login(context, username):
+    input_text(LoginPageSelectors.LOGIN_FIELD, username)
 
 
 @step('I enter password "(?P<password>.+)"')
 def enter_password(context, password):
-    login_page = LoginPage(context)
-    login_page.enter_password(password)
+    input_text(LoginPageSelectors.PASSWORD_FIELD, password)
+
+
+@step("I click on login button")
+def click_on_login_button(context):
+    click(LoginPageSelectors.LOGIN_BUTTON)
+
+
+@then("I see dashboard")
+def verify_dashboard_visible(context):
+    assert is_visible(DashboardPageSelectors.DASHBOARD_PAGE_TAB)

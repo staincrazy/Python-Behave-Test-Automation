@@ -1,12 +1,10 @@
 from datetime import datetime
 
-from engine.webdriver_init import TestWebDriver
+from custom_test_driver import TestWebDriver
 from utilities.logger import TestLogger
 
 
-def before_all(context):
-
-    pass
+def before_all(context): pass
 
 
 def before_feature(context, feature):
@@ -18,7 +16,7 @@ def before_feature(context, feature):
 
 def before_scenario(context, scenario):
 
-    # Setting up web driver
+    # Setting up web custom_test_driver
 
     context.driver = TestWebDriver.chromedriver_setup()
 
@@ -32,9 +30,7 @@ def after_scenario(context, scenario):
     context.driver.quit()
 
 
-def after_feature(context, feature):
-    pass
+def after_feature(context, feature): pass
 
 
-def after_all(context):
-    pass
+def after_all(context): pass

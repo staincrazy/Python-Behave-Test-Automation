@@ -1,13 +1,8 @@
-from features.pages.base_page import BasePage
+from selenium.webdriver.common.by import By
 
 
-class DashboardPageLocators:
-    dashboard_page_tab = ".//a[@id='menu_dashboard_index']"
+class DashboardPageSelectors:
+
+    DASHBOARD_PAGE_TAB = (By.XPATH, ".//a[@id='menu_dashboard_index']")
 
 
-class DashboardPage(BasePage):
-    def __init__(self, context):
-        BasePage.__init__(
-            self,
-            context.driver
-        )
