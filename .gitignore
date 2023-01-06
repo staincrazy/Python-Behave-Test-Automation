@@ -1,8 +1,6 @@
 __pycache__/
 .DS_Store
-
+test_results
 venv
 .idea
-passwords.py
-testing.py
-mongo_db_connector.py
+
