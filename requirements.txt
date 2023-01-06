@@ -1,10 +1,12 @@
 behave==1.2.6
-crayons==0.4.0
-parse==1.19.0
-parse-type==0.6.0
-pluggy==1.0.0
-pycparser==2.21
-PySocks==1.7.1
-six==1.16.0
-sortedcontainers==2.4.0
-trio-websocket==0.9.2
+webdriver-manager @ git+https://github.com/SergeyPirogov/webdriver_manager@d39033e3fa4895599b9cfd0a15b76de9167dfe63
+selenium==4.7.2
+parse
+six
+parse_type
+certifi
+urllib3
+requests
+python-dotenv
+tqdm
+packaging

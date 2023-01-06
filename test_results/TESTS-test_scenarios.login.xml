@@ -1,18 +1,18 @@
-<testsuite name="test_scenarios.login.User is able to login to OrangeHRM application using correct credentials" tests="3" errors="0" failures="0" skipped="0" time="6.642731" timestamp="2023-01-06T10:46:17.882758" hostname="Reanolds-MacBook-Air.local"><testcase classname="test_scenarios.login.User is able to login to OrangeHRM application using correct credentials" name="Navigate to the application -- @1.1 " status="passed" time="1.581163"><system-out>
+<testsuite name="test_scenarios.login.User is able to login to OrangeHRM application using correct credentials" tests="3" errors="0" failures="0" skipped="0" time="6.503264" timestamp="2023-01-06T11:01:32.220462" hostname="Reanolds-MacBook-Air.local"><testcase classname="test_scenarios.login.User is able to login to OrangeHRM application using correct credentials" name="Navigate to the application -- @1.1 " status="passed" time="1.502966"><system-out>
 <![CDATA[
 @scenario.begin
   Scenario Outline: Navigate to the application -- @1.1 
-    Given I navigate to "https://opensource-demo.orangehrmlive.com/index.php" ... passed in 1.580s
+    Given I navigate to "https://opensource-demo.orangehrmlive.com/index.php" ... passed in 1.501s
     Then I see proper "OrangeHRM" ... passed in 0.002s
 
 @scenario.end
 --------------------------------------------------------------------------------
 ]]>
-</system-out></testcase><testcase classname="test_scenarios.login.User is able to login to OrangeHRM application using correct credentials" name="Navigate to the application -- @1.2 " status="passed" time="1.423217"><system-out>
+</system-out></testcase><testcase classname="test_scenarios.login.User is able to login to OrangeHRM application using correct credentials" name="Navigate to the application -- @1.2 " status="passed" time="1.464095"><system-out>
 <![CDATA[
 @scenario.begin
   Scenario Outline: Navigate to the application -- @1.2 
-    Given I navigate to "https://opensource-demo.orangehrmlive.com/index.php" ... passed in 1.420s
+    Given I navigate to "https://opensource-demo.orangehrmlive.com/index.php" ... passed in 1.461s
     Then I see proper "Hello, World" ... passed in 0.003s
 
 @scenario.end
@@ -22,15 +22,15 @@ Captured stdout:
 Test fails for expected title - Hello, World whilst actual page title is OrangeHRM
 
 ]]>
-</system-out></testcase><testcase classname="test_scenarios.login.User is able to login to OrangeHRM application using correct credentials" name="Login to application -- @1.1 " status="passed" time="3.638351"><system-out>
+</system-out></testcase><testcase classname="test_scenarios.login.User is able to login to OrangeHRM application using correct credentials" name="Login to application -- @1.1 " status="passed" time="3.536203"><system-out>
 <![CDATA[
 @scenario.begin
   Scenario Outline: Login to application -- @1.1 
-    Given I navigate to "https://opensource-demo.orangehrmlive.com/index.php" ... passed in 1.428s
-    When I enter username "Admin" ... passed in 0.605s
-    And I enter password "admin123" ... passed in 0.034s
+    Given I navigate to "https://opensource-demo.orangehrmlive.com/index.php" ... passed in 1.488s
+    When I enter username "Admin" ... passed in 0.596s
+    And I enter password "admin123" ... passed in 0.036s
     And I click on login button ... passed in 0.027s
-    Then I see dashboard ... passed in 1.543s
+    Then I see dashboard ... passed in 1.389s
 
 @scenario.end
 --------------------------------------------------------------------------------
