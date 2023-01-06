@@ -1,5 +1,4 @@
 from selenium.webdriver.common.by import By
-from engine.actions import *
 
 
 class LoginPageSelectors:
@@ -11,15 +10,4 @@ class LoginPageSelectors:
     LOGIN_BUTTON = (By.XPATH, ".//input[@id='btnLogin']")
 
 
-class LoginPage:
-
-    __default_username = ""
-    __default_password = ""
-
-    @staticmethod
-    def login(username=None, password=None):
-
-        input_text(LoginPageSelectors.LOGIN_FIELD, username)
-        input_text(LoginPageSelectors.PASSWORD_FIELD, password)
-        click(LoginPageSelectors.LOGIN_BUTTON)
 

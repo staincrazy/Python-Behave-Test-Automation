@@ -1,4 +1,3 @@
-from webdriver_init import TestWebDriver
 from selenium.webdriver import ActionChains
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
@@ -6,14 +5,14 @@ from selenium.webdriver.support import expected_conditions as EC
 
 class Browser:
 
-    def __init__(self, timeout=None):
+    def __init__(self, driver, timeout=None):
 
         if timeout is not None:
             self.timeout = timeout
         else:
             self.timeout = 10
 
-        self.driver = TestWebDriver.chromedriver_setup()
+        self.driver = driver
 
     def get_page_title(self):
 
