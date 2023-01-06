@@ -16,3 +16,7 @@ Navigate to the application -- @1.1  is executed with the result Status.passed a
 Navigate to the application -- @1.2  is executed with the result Status.passed at 2023-01-06 10:16:45.119021
 Navigate to the application -- @1.1  is executed with the result Status.passed at 2023-01-06 10:18:16.078801
 Navigate to the application -- @1.2  is executed with the result Status.passed at 2023-01-06 10:18:19.579242
+Login to application -- @1.1  is executed with the result Status.failed at 2023-01-06 10:23:47.596401
+Login to application -- @1.1  is executed with the result Status.failed at 2023-01-06 10:27:04.439249
+Login to application -- @1.1  is executed with the result Status.failed at 2023-01-06 10:32:05.463845
+Login to application -- @1.1  is executed with the result Status.passed at 2023-01-06 10:35:02.184193
