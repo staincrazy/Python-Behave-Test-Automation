@@ -7,7 +7,7 @@ from selenium import webdriver
 class TestWebDriver:
 
     @staticmethod
-    def chromedriver_setup():
+    def chromedriver_setup() -> webdriver:
 
         service = Service(ChromeDriverManager().install())
         options = Options()
